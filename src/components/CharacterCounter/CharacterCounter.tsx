@@ -6,6 +6,9 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({
   maxWords,
   targetReadingTime,
 }) => {
-  return;
-  <div></div>;
+  return (
+    <div className="">
+
+    </div>
+  )
 };
