@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { TextInput } from "../TextInput/TextInput";
 import { StatDisplay } from "../StatsDisplay/StatsDisplay";
 
+const WORDS_PER_MINUTE = 200;
+
 export const CharacterCounter: React.FC<CharacterCounterProps> = ({
   minWords = 0,
   maxWords = Infinity,
@@ -25,5 +27,7 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({
     maxWords !== Infinity
       ? Math.min((stats.wordCount / maxWords) * 100, 100)
       : 0;
-  return <div className=""></div>;
+  return <div className="max-w-3xl mx-auto p-6">
+    
+  </div>;
 };
