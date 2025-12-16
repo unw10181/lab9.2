@@ -2,12 +2,13 @@ import type { CharacterCounterProps, TextStats } from "../../types";
 import React, { useState } from "react";
 import { TextInput } from "../TextInput/TextInput";
 import { StatDisplay } from "../StatsDisplay/StatsDisplay";
+import "../../App.css";
 
 const WORDS_PER_MINUTE = 200;
 
 export const CharacterCounter: React.FC<CharacterCounterProps> = ({
-  minWords = 0,
-  maxWords = Infinity,
+  minWords = 25,
+  maxWords = 100,
   targetReadingTime,
 }) => {
   const [text, setText] = useState("");
@@ -36,7 +37,7 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({
       {(minWords > 0 || maxWords !== Infinity) && (
         <div className="mt-4">
           <p className="text-sm text-gray-600">
-            Min: {minWords} | Max: {maxWords === Infinity ? "∞" : maxWords}
+            Min: {minWords} | Max: {maxWords === 100 ? "100" : maxWords}
           </p>
 
           {maxWords !== Infinity && (
